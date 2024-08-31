@@ -16,7 +16,7 @@ import java.util.Map;
 @Setter
 @StorageAnnotation
 public class InMemoryStorage implements Storage {
-    private Map<Long, Trainee> trainees = new HashMap<>();
-    private Map<Long, Trainer> trainers = new HashMap<>();
-    private Map<Long, Training> trainings = new HashMap<>();
+    private Map<Integer, Trainee> trainees = new HashMap<>();
+    private Map<Integer, Trainer> trainers = new HashMap<>();
+    private Map<Integer, Training> trainings = new HashMap<>();
 }

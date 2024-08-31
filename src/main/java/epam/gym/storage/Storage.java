@@ -7,7 +7,7 @@ import epam.gym.entity.Training;
 import java.util.Map;
 
 public interface Storage {
-    Map<Long, Trainee> getTrainees();
-    Map<Long, Trainer> getTrainers();
-    Map<Long, Training> getTrainings();
+    Map<Integer, Trainee> getTrainees();
+    Map<Integer, Trainer> getTrainers();
+    Map<Integer, Training> getTrainings();
 }
