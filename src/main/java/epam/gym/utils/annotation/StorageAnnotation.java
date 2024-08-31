@@ -1,4 +1,4 @@
-package epam.gym.utils;
+package epam.gym.utils.annotation;
 
 import org.springframework.stereotype.Component;
 
