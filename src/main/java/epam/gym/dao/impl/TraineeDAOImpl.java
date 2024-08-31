@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @DAO
 public class TraineeDAOImpl implements TraineeDAO {
@@ -21,10 +22,8 @@ public class TraineeDAOImpl implements TraineeDAO {
     }
 
     @Override
-    public Optional<Trainee> add(Trainee trainee) {
-        Integer maxId = trainees.keySet().stream().max(Integer::compareTo).orElse(0) + 1;
-        Trainee result = trainees.put(maxId, trainee);
-        return Optional.ofNullable(result);
+    public Optional<Trainee> add(int traineeId, Trainee trainee) {
+        return Optional.ofNullable(trainees.put(traineeId, trainee));
     }
 
     @Override
@@ -53,5 +52,18 @@ public class TraineeDAOImpl implements TraineeDAO {
     @Override
     public List<Trainee> getTrainees() {
         return new ArrayList<>(trainees.values());
+    }
+
+    @Override
+    public List<Trainee> getAllTraineesByUsername(String username) {
+        return trainees.values()
+                       .stream()
+                       .filter(trainee -> trainee.getUsername().matches(username + "\\d+"))
+                       .collect(Collectors.toList());
+    }
+
+    @Override
+    public int getMaxId() {
+        return trainees.keySet().stream().max(Integer::compareTo).orElse(0) + 1;
     }
 }

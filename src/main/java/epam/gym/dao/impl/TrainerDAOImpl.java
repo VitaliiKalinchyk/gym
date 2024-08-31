@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @DAO
 public class TrainerDAOImpl implements TrainerDAO {
@@ -21,10 +22,8 @@ public class TrainerDAOImpl implements TrainerDAO {
     }
 
     @Override
-    public Optional<Trainer> add(Trainer trainee) {
-        Integer maxId = trainers.keySet().stream().max(Integer::compareTo).orElse(0) + 1;
-        Trainer result = trainers.put(maxId, trainee);
-        return Optional.ofNullable(result);
+    public Optional<Trainer> add(int trainerId, Trainer trainee) {
+        return Optional.ofNullable(trainers.put(trainerId, trainee));
     }
 
     @Override
@@ -48,5 +47,18 @@ public class TrainerDAOImpl implements TrainerDAO {
     @Override
     public List<Trainer> getTrainers() {
         return new ArrayList<>(trainers.values());
+    }
+
+    @Override
+    public List<Trainer> getAllTrainersByUsername(String username) {
+        return trainers.values()
+                .stream()
+                .filter(trainee -> trainee.getUsername().matches(username + "\\d+"))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public int getMaxId() {
+        return trainers.keySet().stream().max(Integer::compareTo).orElse(0) + 1;
     }
 }
