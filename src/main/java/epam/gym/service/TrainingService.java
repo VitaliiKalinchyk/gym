@@ -11,5 +11,7 @@ public interface TrainingService {
 
     Optional<Training> getById(int trainingId);
 
+    Optional<Training> getByName(String name);
+
     List<Training> getTrainings();
 }

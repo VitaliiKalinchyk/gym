@@ -24,6 +24,11 @@ public class TrainingServiceImpl implements TrainingService {
     }
 
     @Override
+    public Optional<Training> getByName(String name) {
+        return Optional.empty();
+    }
+
+    @Override
     public List<Training> getTrainings() {
         return null;
     }
