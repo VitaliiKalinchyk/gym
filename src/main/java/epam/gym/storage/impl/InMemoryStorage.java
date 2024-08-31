@@ -4,7 +4,7 @@ import epam.gym.entity.Trainee;
 import epam.gym.entity.Trainer;
 import epam.gym.entity.Training;
 import epam.gym.storage.Storage;
-import epam.gym.utils.StorageAnnotation;
+import epam.gym.utils.annotation.StorageAnnotation;
 
 import lombok.Getter;
 import lombok.Setter;
