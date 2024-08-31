@@ -5,8 +5,7 @@ import epam.gym.entity.Trainer;
 import epam.gym.entity.Training;
 import epam.gym.storage.Storage;
 
-import lombok.RequiredArgsConstructor;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -15,10 +14,14 @@ import java.util.Map;
 
 @Configuration
 @ComponentScan(basePackages = "epam.gym")
-@RequiredArgsConstructor
 public class GymAppConfig {
 
-    private final Storage storage;
+    private Storage storage;
+
+    @Autowired
+    public void setStorage(Storage storage) {
+        this.storage = storage;
+    }
 
     @Bean
     public Map<Integer, Trainee> trainees() {
@@ -34,5 +37,4 @@ public class GymAppConfig {
     public Map<Integer, Training> trainings() {
         return storage.getTrainings();
     }
-
 }
