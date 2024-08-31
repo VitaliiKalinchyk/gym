@@ -1,4 +1,4 @@
-package epam.gym.utils;
+package epam.gym.utils.impl;
 
 public class NameGeneratorImpl {
 }
