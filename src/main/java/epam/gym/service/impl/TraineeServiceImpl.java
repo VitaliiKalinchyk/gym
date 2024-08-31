@@ -6,10 +6,13 @@ import epam.gym.service.TraineeService;
 
 import lombok.RequiredArgsConstructor;
 
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Optional;
 
 @RequiredArgsConstructor
+@Service
 public class TraineeServiceImpl implements TraineeService {
     private final TraineeDAO traineeDAO;
 
