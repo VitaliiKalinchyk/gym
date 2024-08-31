@@ -1,7 +1,8 @@
 package epam.gym.storage.impl;
 
-import epam.gym.utils.Storage;
+import epam.gym.storage.Storage;
+import epam.gym.utils.StorageAnnotation;
 
-@Storage
-public class InMemoryStorage implements epam.gym.storage.Storage {
+@StorageAnnotation
+public class InMemoryStorage implements Storage {
 }
