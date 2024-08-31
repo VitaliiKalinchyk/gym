@@ -6,6 +6,7 @@ import epam.gym.service.TrainingService;
 
 import lombok.RequiredArgsConstructor;
 
+import java.util.List;
 import java.util.Optional;
 
 @RequiredArgsConstructor
@@ -20,5 +21,10 @@ public class TrainingServiceImpl implements TrainingService {
     @Override
     public Optional<Training> getById(int trainingId) {
         return Optional.empty();
+    }
+
+    @Override
+    public List<Training> getTrainings() {
+        return null;
     }
 }
