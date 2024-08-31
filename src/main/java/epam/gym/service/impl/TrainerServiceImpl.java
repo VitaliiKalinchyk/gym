@@ -15,26 +15,26 @@ public class TrainerServiceImpl implements TrainerService {
 
     @Override
     public Optional<Trainer> add(Trainer trainer) {
-        return Optional.empty();
+        return trainerDAO.add(trainer);
     }
 
     @Override
     public Optional<Trainer> edit(Trainer trainer) {
-        return Optional.empty();
+        return trainerDAO.edit(trainer);
     }
 
     @Override
     public Optional<Trainer> getById(int trainerId) {
-        return Optional.empty();
+        return trainerDAO.getById(trainerId);
     }
 
     @Override
     public Optional<Trainer> getByUsername(String username) {
-        return Optional.empty();
+        return trainerDAO.getByUsername(username);
     }
 
     @Override
     public List<Trainer> getTrainers() {
-        return null;
+        return trainerDAO.getTrainers();
     }
 }

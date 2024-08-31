@@ -15,21 +15,21 @@ public class TrainingServiceImpl implements TrainingService {
 
     @Override
     public Optional<Training> add(Training training) {
-        return Optional.empty();
+        return trainingDAO.add(training);
     }
 
     @Override
     public Optional<Training> getById(int trainingId) {
-        return Optional.empty();
+        return trainingDAO.getById(trainingId);
     }
 
     @Override
     public Optional<Training> getByName(String name) {
-        return Optional.empty();
+        return trainingDAO.getByName(name);
     }
 
     @Override
     public List<Training> getTrainings() {
-        return null;
+        return trainingDAO.getTrainings();
     }
 }

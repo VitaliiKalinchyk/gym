@@ -15,31 +15,31 @@ public class TraineeServiceImpl implements TraineeService {
 
     @Override
     public Optional<Trainee> add(Trainee trainee) {
-        return Optional.empty();
+        return traineeDAO.add(trainee);
     }
 
     @Override
     public Optional<Trainee> edit(Trainee trainee) {
-        return Optional.empty();
+        return traineeDAO.edit(trainee);
     }
 
     @Override
     public boolean delete(int traineeId) {
-        return false;
+        return traineeDAO.delete(traineeId);
     }
 
     @Override
     public Optional<Trainee> getById(int traineeId) {
-        return Optional.empty();
+        return traineeDAO.getById(traineeId);
     }
 
     @Override
     public Optional<Trainee> getByUsername(String username) {
-        return Optional.empty();
+        return traineeDAO.getByUsername(username);
     }
 
     @Override
     public List<Trainee> getTrainees() {
-        return null;
+        return traineeDAO.getTrainees();
     }
 }
