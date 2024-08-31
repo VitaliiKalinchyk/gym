@@ -23,7 +23,8 @@ public class TrainerDAOImpl implements TrainerDAO {
 
     @Override
     public Optional<Trainer> add(int trainerId, Trainer trainee) {
-        return Optional.ofNullable(trainers.put(trainerId, trainee));
+        trainers.put(trainerId, trainee);
+        return getById(trainerId);
     }
 
     @Override

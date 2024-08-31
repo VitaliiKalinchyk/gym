@@ -23,7 +23,8 @@ public class TraineeDAOImpl implements TraineeDAO {
 
     @Override
     public Optional<Trainee> add(int traineeId, Trainee trainee) {
-        return Optional.ofNullable(trainees.put(traineeId, trainee));
+        trainees.put(traineeId, trainee);
+        return getById(traineeId);
     }
 
     @Override
