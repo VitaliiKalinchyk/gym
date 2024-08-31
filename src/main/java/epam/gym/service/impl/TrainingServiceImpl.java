@@ -17,7 +17,7 @@ public class TrainingServiceImpl implements TrainingService {
     private final TrainingDAO trainingDAO;
 
     @Override
-    public Optional<Training> add(int trainingId, Training training) {
+    public Optional<Training> add(Training training) {
         int maxId = trainingDAO.getMaxId();
 
         training.setTrainingId(maxId);

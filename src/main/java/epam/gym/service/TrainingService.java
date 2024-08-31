@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface TrainingService {
 
-    Optional<Training> add(int trainingId, Training training);
+    Optional<Training> add(Training training);
 
     Optional<Training> getById(int trainingId);
 
