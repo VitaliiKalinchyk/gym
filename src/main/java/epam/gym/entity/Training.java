@@ -7,6 +7,7 @@ import java.time.LocalDate;
 @Setter
 @Getter
 @EqualsAndHashCode(of = "trainingId", callSuper = false)
+@ToString
 public class Training {
     private int trainingId;
     private int traineeId;
