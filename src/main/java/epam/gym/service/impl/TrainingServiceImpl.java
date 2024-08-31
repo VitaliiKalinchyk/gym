@@ -17,18 +17,17 @@ public class TrainingServiceImpl implements TrainingService {
     private final TrainingDAO trainingDAO;
 
     @Override
-    public Optional<Training> add(Training training) {
-        return trainingDAO.add(training);
+    public Optional<Training> add(int trainingId, Training training) {
+        int maxId = trainingDAO.getMaxId();
+
+        training.setTrainingId(maxId);
+
+        return trainingDAO.add(maxId, training);
     }
 
     @Override
     public Optional<Training> getById(int trainingId) {
         return trainingDAO.getById(trainingId);
-    }
-
-    @Override
-    public Optional<Training> getByName(String name) {
-        return trainingDAO.getByName(name);
     }
 
     @Override

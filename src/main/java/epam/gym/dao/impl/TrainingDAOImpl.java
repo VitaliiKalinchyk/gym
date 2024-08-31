@@ -21,10 +21,9 @@ public class TrainingDAOImpl implements TrainingDAO {
     }
 
     @Override
-    public Optional<Training> add(Training training) {
-        Integer maxId = trainings.keySet().stream().max(Integer::compareTo).orElse(0) + 1;
-        Training result = trainings.put(maxId, training);
-        return Optional.ofNullable(result);
+    public Optional<Training> add(int trainingId, Training training) {
+        trainings.put(trainingId, training);
+        return getById(trainingId);
     }
 
     @Override
@@ -33,15 +32,12 @@ public class TrainingDAOImpl implements TrainingDAO {
     }
 
     @Override
-    public Optional<Training> getByName(String name) {
-        return trainings.values()
-                .stream()
-                .filter(training -> training.getName().equals(name))
-                .findAny();
+    public List<Training> getTrainings() {
+        return new ArrayList<>(trainings.values());
     }
 
     @Override
-    public List<Training> getTrainings() {
-        return new ArrayList<>(trainings.values());
+    public int getMaxId() {
+        return trainings.keySet().stream().max(Integer::compareTo).orElse(0) + 1;
     }
 }

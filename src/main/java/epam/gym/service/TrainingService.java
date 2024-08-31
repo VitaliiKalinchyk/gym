@@ -7,11 +7,9 @@ import java.util.Optional;
 
 public interface TrainingService {
 
-    Optional<Training> add(Training training);
+    Optional<Training> add(int trainingId, Training training);
 
     Optional<Training> getById(int trainingId);
-
-    Optional<Training> getByName(String name);
 
     List<Training> getTrainings();
 }
