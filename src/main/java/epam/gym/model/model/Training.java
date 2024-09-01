@@ -1,6 +1,9 @@
 package epam.gym.model.model;
 
-import lombok.*;
+import lombok.EqualsAndHashCode;
+import lombok.Setter;
+import lombok.Getter;
+import lombok.ToString;
 
 import java.time.LocalDate;
 

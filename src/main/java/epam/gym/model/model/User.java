@@ -1,7 +1,8 @@
 package epam.gym.model.model;
 
-
-import lombok.*;
+import lombok.Setter;
+import lombok.Getter;
+import lombok.ToString;
 
 @Setter
 @Getter
