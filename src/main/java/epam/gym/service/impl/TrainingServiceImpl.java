@@ -1,7 +1,7 @@
 package epam.gym.service.impl;
 
 import epam.gym.dao.TrainingDAO;
-import epam.gym.entity.Training;
+import epam.gym.model.model.Training;
 import epam.gym.service.TrainingService;
 
 import lombok.RequiredArgsConstructor;

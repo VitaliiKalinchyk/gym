@@ -1,8 +1,8 @@
 package epam.gym.utils.impl;
 
-import epam.gym.entity.Trainee;
-import epam.gym.entity.Trainer;
-import epam.gym.entity.User;
+import epam.gym.model.model.Trainee;
+import epam.gym.model.model.Trainer;
+import epam.gym.model.model.User;
 import epam.gym.utils.NameGenerator;
 import org.springframework.stereotype.Component;
 

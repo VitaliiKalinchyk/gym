@@ -2,7 +2,7 @@ package epam.gym.service.impl;
 
 import epam.gym.dao.TraineeDAO;
 import epam.gym.dao.TrainerDAO;
-import epam.gym.entity.Trainee;
+import epam.gym.model.model.Trainee;
 import epam.gym.service.TraineeService;
 import epam.gym.utils.NameGenerator;
 import epam.gym.utils.PasswordGenerator;

@@ -1,4 +1,4 @@
-package epam.gym.entity;
+package epam.gym.model.model;
 
 
 import lombok.*;

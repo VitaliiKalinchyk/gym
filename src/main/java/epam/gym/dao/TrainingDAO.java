@@ -1,6 +1,6 @@
 package epam.gym.dao;
 
-import epam.gym.entity.Training;
+import epam.gym.model.model.Training;
 
 import java.util.List;
 import java.util.Optional;

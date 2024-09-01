@@ -1,7 +1,7 @@
 package epam.gym.dao.impl;
 
 import epam.gym.dao.TrainerDAO;
-import epam.gym.entity.Trainer;
+import epam.gym.model.model.Trainer;
 import epam.gym.utils.annotation.DAO;
 
 import org.springframework.beans.factory.annotation.Autowired;

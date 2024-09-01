@@ -1,6 +1,6 @@
 package epam.gym.service;
 
-import epam.gym.entity.Trainee;
+import epam.gym.model.model.Trainee;
 
 import java.util.List;
 import java.util.Optional;

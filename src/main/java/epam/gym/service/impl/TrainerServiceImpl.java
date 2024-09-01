@@ -2,7 +2,7 @@ package epam.gym.service.impl;
 
 import epam.gym.dao.TraineeDAO;
 import epam.gym.dao.TrainerDAO;
-import epam.gym.entity.Trainer;
+import epam.gym.model.model.Trainer;
 import epam.gym.service.TrainerService;
 
 import epam.gym.utils.NameGenerator;
