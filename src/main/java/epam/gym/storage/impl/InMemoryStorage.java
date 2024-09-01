@@ -1,8 +1,8 @@
 package epam.gym.storage.impl;
 
-import epam.gym.entity.Trainee;
-import epam.gym.entity.Trainer;
-import epam.gym.entity.Training;
+import epam.gym.model.model.Trainee;
+import epam.gym.model.model.Trainer;
+import epam.gym.model.model.Training;
 import epam.gym.storage.Storage;
 import epam.gym.utils.annotation.StorageAnnotation;
 
