@@ -16,7 +16,7 @@ public class TrainingDAOImpl implements TrainingDAO {
     private Map<Integer, Training> trainings;
 
     @Autowired
-    public void setTrainees(Map<Integer, Training> trainings) {
+    public void setTrainings(Map<Integer, Training> trainings) {
         this.trainings = trainings;
     }
 
