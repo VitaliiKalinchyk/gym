@@ -17,7 +17,7 @@ public class TrainerDAOImpl implements TrainerDAO {
     private Map<Integer, Trainer> trainers;
 
     @Autowired
-    public void setTrainees(Map<Integer, Trainer> trainers) {
+    public void setTrainers(Map<Integer, Trainer> trainers) {
         this.trainers = trainers;
     }
 
@@ -53,9 +53,9 @@ public class TrainerDAOImpl implements TrainerDAO {
     @Override
     public List<Trainer> getAllTrainersByUsername(String username) {
         return trainers.values()
-                .stream()
-                .filter(trainee -> trainee.getUsername().matches(username + "\\d+"))
-                .collect(Collectors.toList());
+                       .stream()
+                       .filter(trainer -> trainer.getUsername().startsWith(username))
+                       .collect(Collectors.toList());
     }
 
     @Override
