@@ -14,6 +14,7 @@
     <lombok.version>1.18.34</lombok.version>
     <jakarta.annotation.version>3.0.0</jakarta.annotation.version>
     <jackson.dataformat.version>2.17.2</jackson.dataformat.version>
+    <junit.version>5.11.0</junit.version>
   </properties>
 
   <dependencies>
@@ -48,6 +49,12 @@
       <version>${jackson.dataformat.version}</version>
     </dependency>
 
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.11.0</version>
+      <scope>${junit.version}</scope>
+    </dependency>
   </dependencies>
 
   <build>
