@@ -3,5 +3,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+src/main/resources/data/initialData.yml
+
 ### IntelliJ IDEA ###
 .idea/
