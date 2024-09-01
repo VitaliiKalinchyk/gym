@@ -19,12 +19,15 @@ public class NameGeneratorImpl implements NameGenerator {
     @Override
     public String generateUsername(User user, List<Trainee> trainees, List<Trainer> trainers) {
         String baseUsername = generateUsername(user);
-        int maxIndex = Stream.concat(trainees.stream(), trainers.stream())
-                             .map(User::getUsername)
-                             .map(userName -> userName.replaceAll("\\D+?(\\d)", "$1"))
+
+        Stream<User> users = Stream.concat(trainees.stream(), trainers.stream());
+        int maxIndex = users.map(User::getUsername)
+                             .map(userName -> userName.replaceAll("\\D+?(\\d+)$", "$1"))
+                             .filter(s -> !s.isEmpty())
                              .mapToInt(Integer::parseInt)
                              .max()
                              .orElse(0);
+
         return baseUsername + (maxIndex + 1);
     }
 }

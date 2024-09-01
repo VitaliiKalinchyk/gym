@@ -60,7 +60,7 @@ public class TraineeDAOImpl implements TraineeDAO {
     public List<Trainee> getAllTraineesByUsername(String username) {
         return trainees.values()
                        .stream()
-                       .filter(trainee -> trainee.getUsername().matches(username + "\\d+"))
+                       .filter(trainee -> trainee.getUsername().startsWith(username))
                        .collect(Collectors.toList());
     }
 
