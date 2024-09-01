@@ -11,5 +11,5 @@ import lombok.ToString;
 @ToString(callSuper = true)
 public class Trainer extends User {
     private int trainerId;
-    TrainingType trainingType;
+    private TrainingType trainingType;
 }
