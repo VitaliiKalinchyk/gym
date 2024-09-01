@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 
 @DAO
 public class TraineeDAOImpl implements TraineeDAO {
+
     private Map<Integer, Trainee> trainees;
 
     @Autowired

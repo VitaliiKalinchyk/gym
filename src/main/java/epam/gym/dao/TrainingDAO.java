@@ -12,6 +12,5 @@ public interface TrainingDAO {
 
     List<Training> getTrainings();
 
-
     int getMaxId();
 }
