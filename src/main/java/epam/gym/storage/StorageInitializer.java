@@ -46,10 +46,13 @@ public class StorageInitializer {
 
             storage.setTrainees(root.getTrainees().stream()
                     .collect(Collectors.toMap(Trainee::getTraineeId, Function.identity())));
+
             storage.setTrainers(root.getTrainers().stream()
                     .collect(Collectors.toMap(Trainer::getTrainerId, Function.identity())));
+
             storage.setTrainings(root.getTrainings().stream()
                     .collect(Collectors.toMap(Training::getTrainingId, Function.identity())));
+
         } catch (IOException e) {
             e.printStackTrace();
         }
