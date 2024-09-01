@@ -19,10 +19,10 @@ import java.util.Map;
 @PropertySource("classpath:application.properties")
 public class GymAppConfig {
 
-    private Storage storage;
+    private final Storage storage;
 
     @Autowired
-    public void setStorage(Storage storage) {
+    public GymAppConfig(Storage storage) {
         this.storage = storage;
     }
 
