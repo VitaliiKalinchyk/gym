@@ -4,17 +4,21 @@ import epam.gym.dao.TrainingDAO;
 import epam.gym.model.model.Training;
 import epam.gym.service.TrainingService;
 
-import lombok.RequiredArgsConstructor;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@RequiredArgsConstructor
 @Service
 public class TrainingServiceImpl implements TrainingService {
-    private final TrainingDAO trainingDAO;
+
+    private TrainingDAO trainingDAO;
+
+    @Autowired
+    public void setTrainingDAO(TrainingDAO trainingDAO) {
+        this.trainingDAO = trainingDAO;
+    }
 
     @Override
     public Optional<Training> add(Training training) {

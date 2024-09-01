@@ -7,21 +7,44 @@ import epam.gym.service.TrainerService;
 
 import epam.gym.utils.NameGenerator;
 import epam.gym.utils.PasswordGenerator;
-import lombok.RequiredArgsConstructor;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@RequiredArgsConstructor
 @Service
 public class TrainerServiceImpl implements TrainerService {
 
-    private final TrainerDAO trainerDAO;
-    private final TraineeDAO traineeDAO;
-    private final PasswordGenerator passwordGenerator;
-    private final NameGenerator nameGenerator;
+    private TrainerDAO trainerDAO;
+
+    private TraineeDAO traineeDAO;
+
+    private PasswordGenerator passwordGenerator;
+
+    private NameGenerator nameGenerator;
+
+    @Autowired
+    public void setTraineeDAO(TraineeDAO traineeDAO) {
+        this.traineeDAO = traineeDAO;
+    }
+
+    @Autowired
+    public void setTrainerDAO(TrainerDAO trainerDAO) {
+        this.trainerDAO = trainerDAO;
+    }
+
+    @Autowired
+    public void setPasswordGenerator(PasswordGenerator passwordGenerator) {
+        this.passwordGenerator = passwordGenerator;
+    }
+
+    @Autowired
+    public void setNameGenerator(NameGenerator nameGenerator) {
+        this.nameGenerator = nameGenerator;
+    }
+
 
     @Override
     public Optional<Trainer> add(Trainer trainer) {
