@@ -13,6 +13,6 @@ public class GymApp {
 
         GymFacade facade = context.getBean(GymFacade.class);
 
-        System.out.println(facade.traineeService().getTrainees());
+        System.out.println(facade.trainerService().getTrainers());
     }
 }
